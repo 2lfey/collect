@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  php:
+    build:
+      context: ./
+      args:
+        USER: ${USER:-user}
+        PASSWORD: ${PASSWORD:-password}
+    environment:
+      - APACHE_RUN_USER=${USER:-user}
+      - APACHE_RUN_GROUP=${USER:-user}
+      - LC_CDPATH=/var/www/html
+    restart: unless-stopped
+    container_name: ${PROJECT_NAME:-project}-php
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - ${WEB_PORT:-10000}:80

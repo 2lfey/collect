@@ -1,12 +1,12 @@
 {
-  "name": "jurapro/collect",
+  "name": "ilfey/collect",
   "description": "Module for working with arrays ",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
-      "name": "jurapro",
-      "email": "jurapro@yandex.ru"
+      "name": "ilfey",
+      "email": "ilfey.global@gmail.com"
     }
   ],
   "minimum-stability": "dev",
