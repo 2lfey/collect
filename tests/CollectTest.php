@@ -99,23 +99,27 @@ class CollectTest extends TestCase
         })->toArray(), 'Each should be [26, 34]');
     }
 
-    public function testUnshift() {
+    public function testUnshift()
+    {
         $collect = new Collect([13, 17]);
         $this->assertSame([5, 13, 17], $collect->unshift(5)->toArray(), 'Unshift should be [5, 13, 17]');
     }
 
-    public function testShift() {
+    public function testShift()
+    {
         $collect = new Collect([13, 17]);
         $this->assertSame([17], $collect->shift()->toArray(), 'Shift should be [17]');
     }
 
-    public function testPop() {
+    public function testPop()
+    {
         $collect = new Collect([13, 17]);
         $this->assertSame([13], $collect->pop()->toArray(), 'Pop should be [13]');
     }
 
     // Test broken method
-    public function testSplice() {
+    public function testSplice()
+    {
         $array = [13, 14, 17, 18];
         $collect = new Collect($array);
         $this->assertEquals([13, 18], $collect->splice([1, 2])->toArray());
